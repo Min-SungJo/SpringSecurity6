@@ -23,7 +23,7 @@ public class SecurityConfiguration {
                 .csrf()
                 .disable()
                 .authorizeHttpRequests()
-                .requestMatchers("")
+                .requestMatchers("/api/v1/auth/**")//이 인증 컨트롤러에 있는 메서드 모두 허용
                 .permitAll()
                 .anyRequest()
                 .authenticated()
